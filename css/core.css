@@ -1,0 +1,278 @@
+/******
+Font Faves
+*****/
+:root {
+    --primary:#ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgb(104,104,104,0.8);
+    --dropshadow: 1px 2px 3px rgba(0,0,0,.5);
+    --hoverstatecolor:rgb(0,0,0,0.4);
+}
+@font-face {
+    font-family: BFNarrow;
+    src: url();
+}
+@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+
+html{
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    color: var(--dark);
+}
+
+body{
+    background-color: var(--light);
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.4;
+}
+header{
+    position: relative;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+/* Top Level Header */
+.ribbon-banner{
+    width: 100%;
+    height: 1rem;
+    background-color: var(--dark);
+    z-index: 5;
+    position: absolute;
+    top: 1rem;
+}
+/* Container for top banner */    
+.grid-container {
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(auto,2);
+    grid-template-rows: 23vh;
+    max-width: 1000px;
+}
+.logoNav-area { 
+    grid-area: 1 / 1 / span 1 / span 1; 
+    
+}
+/* Logo Level area */
+    .grid-logoNav-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 2.75fr 1.25fr;
+        box-shadow: var(--dropshadow);
+        height: 222px;
+        max-width: 100%;
+        aspect-ratio: 2/6;           
+    }
+    .logoNav-characters{
+        background-image: url("../images/Skely/CCChar_Logo_NAV.png");
+        background-size: cover;
+        grid-area: 1 / 1 / span 2 / span 1;
+        height: 100%;
+        max-width: 100%;
+        aspect-ratio: 2/4.75;
+    }
+    .logoNav-logo{            
+        background-image: url("../images/Skely/CCLogo_Logo_NAV.png");
+        background-size: cover;
+        grid-area: 1 /1 / span 1 / span 1; 
+        height: 100%;
+        max-width: 100%;
+        aspect-ratio: 2/2;
+    }
+    .grid-logoNav-sub{
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        grid-template-rows: 100%;
+        height: 100%;
+        max-width: 100%;      
+        aspect-ratio: 2/1.25;
+        position: relative;
+    }
+    .logoNav-Login{
+        grid-area: 1 / 1 / span 1 / span 1;            
+        background-image: url("../images/Skely/CCLogin_Logo_NAV.png");
+        background-size: cover;
+        height: 100%;
+        max-width: 100%;
+        aspect-ratio: 1.25/1.25;
+        cursor: pointer;
+    }
+    .logoNav-Login:hover{
+        background-color: var(--hoverstatecolor);
+    }
+    .logoNav-certs{
+        grid-area: 1 / 2 / span 1 / span 1;            
+        background-image: url("../images/Skely/CCCode_Logo_NAV.png");
+        background-size: cover;
+        height: 100%;
+        max-width: 100%;
+        aspect-ratio: 0.75/1.25;
+    }
+    img{
+        max-height: 100%;
+        object-fit: cover;    
+    }
+/* Drop Down Menu controls */
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown_items {
+    display: none;
+    position: absolute;
+    background-color: #e0ffdc;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown_items a {
+    color: black;
+    padding: 2px 2px;
+    text-decoration: none;
+    display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown_items a:hover {
+       background-color: #acacac;
+    }
+
+    /* Show the dropdown menu on hover */
+    .grid-logoNav-sub:hover .dropdown_items {
+    display: block;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .grid-logoNav-sub:hover .logoNav-Login {
+    background-color: #3e8e41;
+    }
+    .dropdown_items li{
+        display:inline;
+    }
+/* Title */
+    .title-banner { 
+        grid-area: 1 / 2 / span 1 / span 1; 
+        height: 100%;
+        width: 100%;
+        padding-top: 2vh;
+        object-fit: fill;
+    }
+   
+/* Main Section of the page.*/
+    main{
+        max-width: 1000px;   
+        margin-right: auto;
+        margin-left: auto;
+        height: 70vh;
+        background-size: cover;
+    }
+/* Social Media defaults */
+    .fa {
+        padding: 14px;
+        font-size: 30px;
+        width: 40px;
+        height:40px;
+        text-align:center;
+        text-decoration: none;
+        vertical-align: bottom;
+        margin: 2px 2px;
+    }
+    .fa:hover {
+        opacity: 0.7;
+    }
+    .fa-youtube {
+        background: #bb0000;
+        color: white;
+    }
+    .fa-instagram {
+        background: #125688;
+        color: white;
+    }   
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }  
+/* Footer area */
+    footer a:link { 
+        color: rgb(235, 235, 235); 
+        text-decoration: none
+    }
+    footer a:visited { 
+        color: rgb(235, 235, 235);
+        text-decoration: none
+    }
+    footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color:var(--dark);
+        text-align: center;
+
+        line-height: 1.1;
+        max-height: 6vh;
+        font-size: 1vmax;
+        text-align: center;
+        padding-right: 1rem; 
+        padding-left: 1rem;
+    }
+    footer ul li{
+        display:inline;
+    }
+/* Desktop */
+@media only screen and (min-width: 1000px){
+    .grid-container{
+        width: 1000px;   
+        margin: auto;
+    }
+    /* Logo Level area */
+    .logoNav-area{
+        align-self:top;
+        height: 100%;
+    }
+}
+/* Tablet */
+@media only screen and (min-width: 752px) and (max-width:999px){
+    body{
+        min-height: 450px;
+    }
+    .grid-container{
+        grid-template-columns: 1fr 6fr;
+        grid-template-rows: 23vh;
+        min-width: 98vw;  
+        padding-left: 1vw;
+    }    
+}
+/* Mobile */
+@media only screen and (max-width: 751px) {
+    body{
+        min-width: 450px;
+        min-height: 700px;
+    }
+    /* Container for top banner */    
+    .grid-container {
+        grid-template-columns: 1fr 6fr;
+        grid-template-rows: 23vh;
+        width: minmax(450,auto);  
+        padding-left: 1vw;
+    }
+    .title-banner { 
+        height: 100%;
+        width: 100%;
+        padding-top: 2vh;
+        object-fit: fill;
+    }
+    .grid-logoNav-container{
+        min-height: 100%;
+    }
+    main{
+        padding: 2vw;
+    }
+}
